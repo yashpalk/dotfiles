@@ -1,0 +1,17 @@
+[core]
+    autocrlf = input
+[color]
+    diff = always
+    status = always
+    branch = always
+    interactive = always
+[alias]
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \\t=> \\2/' | sort
+    aa = add .
+    au = add -u
+    bf = "!f(){ git branch -ra | grep $1; }; f"
+    br = branch
+    ci = commit -m
+    co = checkout
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    st = status
