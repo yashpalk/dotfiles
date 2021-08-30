@@ -6,7 +6,7 @@
     branch = always
     interactive = always
 [alias]
-    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \\t=> \\2/' | sort
+    alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ , => , \\2/' | sort | column -t -s ','
     aa = add .
     au = add -u
     bf = "!f(){ git branch -ra | grep $1; }; f"
