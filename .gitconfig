@@ -1,5 +1,11 @@
 [core]
-    autocrlf = input
+	autocrlf = input
+[protocol]
+	version = 2
+[pull]
+	rebase = true
+[branch]
+	autosetuprebase = always
 [color]
     diff = always
     status = always
@@ -15,3 +21,5 @@
     co = checkout
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     st = status
+[push]
+	autoSetupRemote = true
